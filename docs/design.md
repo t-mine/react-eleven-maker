@@ -27,8 +27,8 @@ Reactを学ぶためサッカースタメン図作成ツールを作成する。
 App
 ├─ FormationDropDown
 ├─ ElevenArea
-    └─ PositionArea
-    └─ DownloadButton
+    └─ PlayerSlot
+├─ DownloadButton
 └─ PlayerList
     └─ PlayerItem
 ```
@@ -40,7 +40,7 @@ App
 | App | スタメンデータを管理する |
 | FormationDropDown | フォーメーションを切り替える |
 | ElevenArea | スタメンを表示する |
-| PositionArea | 選手を配置する領域 |
+| PlayerSlot | 選手を配置する領域 |
 | DownloadButton | スタメン図をダウンロードする |
 | PlayerList | プレイヤーの一覧を表示する |
 | PlayerItem | プレイヤーの情報を表示する |
@@ -53,9 +53,9 @@ App
 type Player {
   id: string, // uuid
   name: string,
-  positionId: number
+  positionId: number | null
 }
-type Postion = {
+type Position = {
   id: number, // 1～11
   x: number,
   y: number,
