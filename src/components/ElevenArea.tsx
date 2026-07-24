@@ -1,6 +1,11 @@
+import type { Eleven } from "../types/eleven"
 import PlayerSlot from "./PlayerSlot"
 
-function ElevenArea() {
+type Props = {
+    eleven: Eleven
+}
+
+function ElevenArea({ eleven }: Props) {
 
     return (
     <>
