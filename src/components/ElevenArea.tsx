@@ -12,7 +12,7 @@ function ElevenArea({ eleven }: Props) {
         <div style={{ backgroundColor: "green" }}>
             <div>ElevenArea</div>
             {
-                eleven.formation.positions.map(position => <PlayerSlot key={position.id}/>)
+                eleven.formation.positions.map(position => <PlayerSlot position={position} key={position.id}/>)
             }
         </div>
     </>
