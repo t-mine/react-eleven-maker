@@ -6,18 +6,18 @@ type Props = {
 
 function PlayerSlot({position}: Props) {
 
-    const x = position.x;
-    const y = position.y;
-
     return (
     <>
         <div 
             style={{ 
-                backgroundColor: "blue",
-                width: "100px"
+                backgroundColor: "skyblue",
+                width: "100px",
+                position: "absolute",
+                left: position.x,
+                top: position.y
             }}
         >
-            PlayerSlot
+            PlayerSlot {position.id}
         </div>
     </>
     )

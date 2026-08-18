@@ -9,24 +9,31 @@ import type { Formation } from './types/formation'
 
 function App() {
 
-  const formations : Formation[] = [
-    {
-      name: "4-4-2",
-      positions: [
-        {id: 1, x: 10, y: 10,},
-        {id: 2, x: 10, y: 10,},
-        {id: 3, x: 10, y: 10,},
-        {id: 4, x: 10, y: 10,},
-        {id: 5, x: 10, y: 10,},
-        {id: 6, x: 10, y: 10,},
-        {id: 7, x: 10, y: 10,},
-        {id: 8, x: 10, y: 10,},
-        {id: 9, x: 10, y: 10,},
-        {id: 10, x: 10, y: 10,},
-        {id: 11, x: 10, y: 10,},
-      ],
-    }
-  ];
+const formations: Formation[] = [
+  {
+    name: "4-4-2",
+    positions: [
+      // GK
+      { id: 1, x: 50, y: 90 },
+
+      // DF
+      { id: 2, x: 15, y: 70 }, // 左SB
+      { id: 3, x: 38, y: 70 }, // CB
+      { id: 4, x: 62, y: 70 }, // CB
+      { id: 5, x: 85, y: 70 }, // 右SB
+
+      // MF
+      { id: 6, x: 15, y: 45 }, // 左MF
+      { id: 7, x: 38, y: 45 }, // CM
+      { id: 8, x: 62, y: 45 }, // CM
+      { id: 9, x: 85, y: 45 }, // 右MF
+
+      // FW
+      { id: 10, x: 40, y: 20 }, // FW
+      { id: 11, x: 60, y: 20 }, // FW
+    ],
+  },
+];
 
   const [eleven, setEleven] = useState<Eleven>({
     formation: formations[0],
