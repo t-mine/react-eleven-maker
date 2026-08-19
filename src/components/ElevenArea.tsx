@@ -12,8 +12,8 @@ function ElevenArea({ eleven }: Props) {
         <div style={{
             backgroundColor: "green",
             position: "relative",
-            height: "500px",
-            width: "400px"
+            height: "400px",
+            width: "350px"
         }}>
             <div>ElevenArea</div>
             {

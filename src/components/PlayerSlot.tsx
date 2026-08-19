@@ -11,10 +11,12 @@ function PlayerSlot({position}: Props) {
         <div 
             style={{ 
                 backgroundColor: "skyblue",
-                width: "100px",
+                width: "60px",
+                height: "60px",
                 position: "absolute",
                 left: position.x,
-                top: position.y
+                top: position.y,
+                transform: "translate(-50%, -50%)",
             }}
         >
             PlayerSlot {position.id}
