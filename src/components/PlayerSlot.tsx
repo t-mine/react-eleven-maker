@@ -1,10 +1,4 @@
-import type { Position } from "../types/position"
-
-type Props = {
-    position: Position
-}
-
-function PlayerSlot({position}: Props) {
+function PlayerSlot() {
 
     return (
     <>
@@ -13,13 +7,9 @@ function PlayerSlot({position}: Props) {
                 backgroundColor: "skyblue",
                 width: "60px",
                 height: "60px",
-                position: "absolute",
-                left: position.x,
-                top: position.y,
-                transform: "translate(-50%, -50%)",
             }}
         >
-            PlayerSlot {position.id}
+            PlayerSlot
         </div>
     </>
     )

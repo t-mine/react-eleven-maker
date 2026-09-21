@@ -13,21 +13,27 @@ function ElevenArea({ eleven }: Props) {
      * "4-2-1-3" → [1, 4, 2, 1, 3]
      */
     function formationNameToArray(formation: string): number[] {
-        return [1, ...formation.split("-").map(Number)];
+        return [1, ...formation.split("-").map(Number)].reverse();
     }
+
+    const formation = formationNameToArray(eleven.formation.name);
 
     return (
         <>
             <div style={{
                 backgroundColor: "green",
-                position: "relative",
                 height: "400px",
-                width: "350px"
+                width: "350px",
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "space-evenly"
             }}>
                 <div>ElevenArea</div>
-                {
-                    eleven.formation.positions.map(position => <PlayerSlot position={position} key={position.id} />)
-                }
+                {formation.map(num => (
+                    <div style={{ display: "flex", justifyContent: "space-evenly" }}>
+                        {Array.from({ length: num }).map(() => <PlayerSlot ></PlayerSlot>)}
+                    </div>
+                ))}
             </div>
         </>
     )
