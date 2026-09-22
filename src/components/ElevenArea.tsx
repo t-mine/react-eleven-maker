@@ -16,7 +16,7 @@ function ElevenArea({ eleven }: Props) {
         return [1, ...formation.split("-").map(Number)].reverse();
     }
 
-    const formation = formationNameToArray(eleven.formation.name);
+    const formation = formationNameToArray(eleven.formation);
 
     return (
         <>
@@ -28,7 +28,6 @@ function ElevenArea({ eleven }: Props) {
                 flexDirection: "column",
                 justifyContent: "space-evenly"
             }}>
-                <div>ElevenArea</div>
                 {formation.map(num => (
                     <div style={{ display: "flex", justifyContent: "space-evenly" }}>
                         {Array.from({ length: num }).map(() => <PlayerSlot ></PlayerSlot>)}

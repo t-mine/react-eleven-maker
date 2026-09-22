@@ -1,6 +1,1 @@
-import type { Position } from "./position"
-
-export type Formation = {
-    name: "4-4-2" | "4-3-3" | "3-5-2",
-    positions: Position[]
-}
+export type Formation = "4-4-2" | "4-3-3" | "3-5-2" | "4-1-2-3"
