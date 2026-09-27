@@ -1,7 +1,6 @@
-import type { Formation } from "./formation"
 import type { Player } from "./player"
 
 export type Eleven = {
-    formation: Formation,
+    formation: string, // "4-4-2"
     players: Player[]
 }
