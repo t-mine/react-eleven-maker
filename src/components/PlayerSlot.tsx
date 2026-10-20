@@ -7,6 +7,7 @@ function PlayerSlot() {
     return (
         <>
             <div
+                onClick={() => setIsOpen(true)}
                 style={{
                     backgroundColor: "skyblue",
                     width: "60px",
@@ -14,14 +15,11 @@ function PlayerSlot() {
                 }}
             >
                 PlayerSlot
-                <button onClick={() => setIsOpen(true)}>
-                    モーダルを開く
-                </button>
-                <PlayerSelectModal
-                    isOpen={isOpen}
-                    onClose={() => setIsOpen(false)}
-                />
             </div>
+            <PlayerSelectModal
+                isOpen={isOpen}
+                onClose={() => setIsOpen(false)}
+            />
         </>
     )
 }
