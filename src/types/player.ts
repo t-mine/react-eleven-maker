@@ -1,5 +1,5 @@
 export type Player = {
-    id: string, // uuid
+    id: number,
     name: string,
-    positionId: number | null
+    position: "GK" | "DF" | "MF" | "FW"
 }

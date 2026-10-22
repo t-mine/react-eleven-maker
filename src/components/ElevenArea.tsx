@@ -9,14 +9,16 @@ function ElevenArea({ eleven }: Props) {
 
     /**
      * フォーメーション名を配列に変換する
-     * "4-4-2" → [1, 4, 4, 2]
-     * "4-2-1-3" → [1, 4, 2, 1, 3]
+     * "4-4-2" → [2, 4, 4, 1]
+     * "4-2-1-3" → [3, 1, 2, 4, 1]
      */
     function formationNameToArray(formation: string): number[] {
         return [1, ...formation.split("-").map(Number)].reverse();
     }
 
     const formation = formationNameToArray(eleven.formation);
+
+    let index = 10;
 
     return (
         <>
@@ -30,7 +32,7 @@ function ElevenArea({ eleven }: Props) {
             }}>
                 {formation.map(num => (
                     <div style={{ display: "flex", justifyContent: "space-evenly" }}>
-                        {Array.from({ length: num }).map(() => <PlayerSlot ></PlayerSlot>)}
+                        {Array.from({ length: num }).map(() => <PlayerSlot player={eleven.players[index--]}></PlayerSlot>)}
                     </div>
                 ))}
             </div>

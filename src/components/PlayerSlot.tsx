@@ -1,7 +1,12 @@
 import { useState } from "react";
 import PlayerSelectModal from "./PlayerSelectModal";
+import type { Player } from "../types/player";
 
-function PlayerSlot() {
+type Props = {
+    player: Player
+}
+
+function PlayerSlot({player} : Props) {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
@@ -14,7 +19,7 @@ function PlayerSlot() {
                     height: "60px",
                 }}
             >
-                PlayerSlot
+                {player.name}
             </div>
             <PlayerSelectModal
                 isOpen={isOpen}

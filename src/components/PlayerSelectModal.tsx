@@ -12,8 +12,6 @@ function PlayerSelectModal({ isOpen, onClose }: ModalProps) {
     return (
         <div className="modal-overlay">
             <div className="modal-content">
-                <h2 className="modal-title">確認</h2>
-
                 <div className="modal-body">
                     モーダルのサンプルです。
                 </div>
